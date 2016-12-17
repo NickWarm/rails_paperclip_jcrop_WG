@@ -1,4 +1,4 @@
-class AddImageToBlog < ActiveRecord::Migration
+class AddImageToBlogs < ActiveRecord::Migration
   def change
     add_attachment :blogs, :image
   end
