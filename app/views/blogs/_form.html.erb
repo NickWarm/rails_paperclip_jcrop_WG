@@ -1,4 +1,4 @@
-<%= form_for(@blog) do |f| %>
+<%= form_for @blog  do |f| %>
   <% if @blog.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
@@ -19,6 +19,11 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
